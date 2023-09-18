@@ -1,21 +1,18 @@
-using System;
-using System.Linq.Expressions;
-using System.Reflection;
-
-using Pose.IL;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Pose.IL;
+using System;
 
 namespace Pose.Tests
 {
-    [TestClass]
-    public class MethodDisassemblerTests
+  [TestClass]
+  public class MethodDisassemblerTests
+  {
+    [TestMethod]
+    public void TestGetILInstructions()
     {
-        [TestMethod]
-        public void TestGetILInstructions()
-        {
-            MethodDisassembler methodDisassembler
-                = new MethodDisassembler(typeof(Console).GetMethod("Clear"));
-            Assert.AreNotEqual(0, methodDisassembler.GetILInstructions().Count);
-        }
+      MethodDisassembler methodDisassembler
+          = new MethodDisassembler(typeof(Console).GetMethod("Clear"));
+      Assert.AreNotEqual(0, methodDisassembler.GetILInstructions().Count);
     }
+  }
 }

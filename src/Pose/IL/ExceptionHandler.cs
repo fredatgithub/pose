@@ -3,20 +3,20 @@ using System.Reflection;
 
 namespace Pose.IL
 {
-    internal class ExceptionHandler
-    {
-        public Type CatchType;
+  internal class ExceptionHandler
+  {
+    public Type CatchType;
 
-        public ExceptionHandlingClauseOptions Flags;
+    public ExceptionHandlingClauseOptions Flags;
 
-        public int TryStart;
+    public int TryStart;
 
-        public int TryEnd;
+    public int TryEnd;
 
-        public int FilterStart;
+    public int FilterStart;
 
-        public int HandlerStart;
+    public int HandlerStart;
 
-        public int HandlerEnd;
-    }
+    public int HandlerEnd;
+  }
 }
